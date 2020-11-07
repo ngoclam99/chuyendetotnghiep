@@ -1,0 +1,222 @@
+html,body{
+  height: 100%;
+}
+@font-face{
+  src:url('../font-family/UTM/UTMHelvetIns.ttf');
+  font-family: "UTM";
+}
+@font-face{
+   src:url('../font-family/Roboto-Medium.ttf');
+   font-family: "Roboto-Medium";
+}
+/*@font-face{
+    src:url('../font-family/SFUToledoBold.TTF');
+    font-family: "SFUToledoBold";
+}
+@font-face{
+ src:url('../font-family/SFUToledoMedium.TTF');
+ font-family: "SFUToledoMedium";
+ }*/
+ .pd-0{
+    padding: 0;
+}
+@font-face {
+    font-family: 'Roboto Bold';
+    src: url("../fonts/Roboto-Condensed-Bold.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("../fonts/Roboto-Condensed-Regular.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+body {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+input[type="button"] {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+}
+
+
+ul {
+    padding: 0 0;
+    margin: 0 0;
+    list-style: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+body {
+    padding: 0 0;
+    margin: 0 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+}
+
+.form-gp input {
+  height: 47px;
+}
+.focused label{
+   top:-25px;
+}
+.login-box {
+    min-height: 78vh;
+}
+.panel-primary>.panel-heading {
+    background-color: #fff;
+    border-color: #fff;
+}
+.splash-description{
+ color:#000000;
+}
+.splash-description h4:nth-child(1){
+ color: #014886;
+ text-transform: uppercase;
+ font-size: 22px;
+ font-weight: bold;
+}
+.splash-description h5{
+ color: #ef0949;
+ /*text-transform: uppercase;*/
+ font-size: 17px;
+}
+.p-r{
+ border: none;
+ border-radius: 6px;
+ box-shadow: 0px 0px 10px 0px #Ccc;
+ margin-top: 29px;
+ transform-origin: 0% 100%;
+ /*animation: lat 2s forwards;*/
+ border-top: 3px solid #1397d6;
+}
+/*@-webkit-keyframes lat{
+	0%{
+		opacity: 0;
+		transform: rotateY(90deg);
+	}
+	100%{
+		opacity: 1;
+		transform: rotateY(0deg);
+	}
+  }*/
+  .col-lg-offset-3 {
+    /*margin-left: 30%;*/
+}
+.repon-log{
+ perspective: 900px;
+}
+.ct-login{
+ transition: all 1s;
+ z-index: 2;
+ position: relative;
+}
+.bacground{
+ background-image: url('../img/bg.png');
+ height: 100%;
+ width: 100%;
+ position: absolute;
+ background-size: cover;
+ background-position: center;
+ /*opacity: 0.1;*/
+ transition: all 1s;
+}
+/*.bacground1{
+ position: absolute;
+ z-index: 1;
+ left: 0;
+ height: 100%;
+ width: 100%;
+ top: 0;
+}*/
+.form-control {
+  border-radius: 0 !important;
+  box-shadow: none;
+  border-color: #d2d6de;
+  font-size: medium;
+}
+.title-step1, .title-step2, .title-step3, .title-step4{
+  padding: 10px;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+.title-step1{
+  background: #4CAF50;
+}
+.title-step2{
+  background: #ff9800;
+}
+.title-step3{
+  background: #e91e63;
+}
+.title-step4{
+  background: #00008bbf;
+}
+
+.header-title{
+    border-bottom: 3px solid #3F51B5;
+    padding: 11px;
+    text-transform: uppercase;
+    line-height: 27px;
+    padding-left: 0;
+    padding-right: 0;
+    font-weight: 600;
+}
+.ttcn {
+    font-size: 20px;
+    text-transform: uppercase;
+    border-left: 5px solid #3F51B5;
+    padding-left: 13px;
+    color: #3f51b5de;
+    font-weight: bold;
+}
+.select2-container {
+    width: 100% !important;
+}
+.select2-selection {
+    height: 34px !important;
+}
+.select2-selection__rendered {
+    line-height: 34px !important;
+}
+.select2-container--default .select2-selection--single {
+    border: 1px solid #dadada;
+    border-radius: 0px;
+}
+.error{
+    color:red;
+    font-size: 13px;
+}
+.form-control{
+    margin-bottom: 15px;
+}
+.ghichu{
+  font-size: 14px;
+  line-height: 23px;
+}
+.bacground-dkon{
+   background-image: url('../images/logodki_on.png');
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   background-size: cover;
+   background-position: center;
+   opacity: 0.05;
+   transition: all 1s;
+   
+}

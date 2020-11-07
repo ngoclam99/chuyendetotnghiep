@@ -1,0 +1,927 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2CF551BB-8D0C-4667-A7AA-0F0AB51EFB76}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Quanlybanhang</RootNamespace>
+    <AssemblyName>Quanlybanhang</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="Quanlyhethong\BaocaothongkeHoaDon.aspx" />
+    <Content Include="Quanlyhethong\BaocaothongkeTheoChiNhanh.aspx" />
+    <Content Include="Quanlyhethong\Dangnhap.aspx" />
+    <Content Include="Quanlyhethong\Danhsachhoadon.aspx" />
+    <Content Include="Quanlyhethong\Danhsachnhanvien.aspx" />
+    <Content Include="Quanlyhethong\Danhsachphieunhap.aspx" />
+    <Content Include="Quanlyhethong\Inhoadon.aspx" />
+    <Content Include="Quanlyhethong\Quanlychinhanh.aspx" />
+    <Content Include="Quanlyhethong\Quanlyhoadon.aspx" />
+    <Content Include="Quanlyhethong\Quanlykhachhang.aspx" />
+    <Content Include="Quanlyhethong\Quanlynhacungcap.aspx" />
+    <Content Include="Quanlyhethong\Quanlynhaphang.aspx" />
+    <Content Include="Quanlyhethong\Quanlysanpham.aspx" />
+    <Content Include="Quanlyhethong\Quanlytaikhoan.aspx" />
+    <Content Include="Quanlyhethong\Suaphieunhap.aspx" />
+    <Content Include="Quanlyhethong\Themnhanvien.aspx" />
+    <Content Include="Quanlyhethong\Themsanpham.aspx" />
+    <Content Include="Quanlyhethong\Thuvien\img\bg.png" />
+    <Content Include="Quanlyhethong\Thuvien\img\image_upload.png" />
+    <Content Include="Quanlyhethong\Trangchu.aspx" />
+    <Content Include="Quanlyhethong\Thuvien\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Quanlyhethong\Thuvien\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Quanlyhethong\Thuvien\bootstrap\css\bootstrap.css" />
+    <Content Include="Quanlyhethong\Thuvien\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Quanlyhethong\Thuvien\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Quanlyhethong\Thuvien\bootstrap\js\bootstrap.js" />
+    <Content Include="Quanlyhethong\Thuvien\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Quanlyhethong\Thuvien\css\all.css" />
+    <Content Include="Quanlyhethong\Thuvien\css\animate.css" />
+    <Content Include="Quanlyhethong\Thuvien\css\bootstrap.min.css" />
+    <Content Include="Quanlyhethong\Thuvien\css\component.css" />
+    <Content Include="Quanlyhethong\Thuvien\css\danhmuc.css" />
+    <Content Include="Quanlyhethong\Thuvien\css\dataTables.bootstrap.css" />
+    <Content Include="Quanlyhethong\Thuvien\css\dataTables.bootstrap.min.css" />
+    <Content Include="Quanlyhethong\Thuvien\css\dkttsv.css" />
+    <Content Include="Quanlyhethong\Thuvien\css\login.css" />
+    <Content Include="Quanlyhethong\Thuvien\css\main.css" />
+    <Content Include="Quanlyhethong\Thuvien\css\normalize.css" />
+    <Content Include="Quanlyhethong\Thuvien\css\responsive.css" />
+    <Content Include="Quanlyhethong\Thuvien\css\slick.css" />
+    <Content Include="Quanlyhethong\Thuvien\css\style.css" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\OFL.txt" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\README.txt" />
+    <Content Include="Quanlyhethong\Thuvien\img\DV01.png" />
+    <Content Include="Quanlyhethong\Thuvien\img\logo.jpg" />
+    <Content Include="Quanlyhethong\Thuvien\img\logodki_on.png" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\blank.gif" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\bootsnav.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\chongchuotphai.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\dataTables.bootstrap.min.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\datatables.min.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\fancybox.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\fancybox_loading.gif" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\fancybox_overlay.png" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\fancybox_sprite%402x.png" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\fancybox_sprite.png" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\jquery.dataTables.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\jquery.dataTables.min.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\jquery.fancybox.css" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\jquery.fancybox.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\jquery.fancybox.pack.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\jquery.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\modernizr.custom.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\mousehoa.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\.gitignore" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\css\select2.css" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\css\select2.min.css" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\af.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\ar.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\az.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\bg.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\bn.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\bs.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\ca.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\cs.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\da.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\de.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\dsb.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\el.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\en.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\es.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\et.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\eu.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\fa.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\fi.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\fr.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\gl.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\he.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\hi.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\hr.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\hsb.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\hu.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\hy.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\id.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\is.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\it.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\ja.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\ka.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\km.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\ko.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\lt.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\lv.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\mk.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\ms.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\nb.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\ne.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\nl.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\pl.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\ps.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\pt-BR.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\pt.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\ro.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\ru.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\sk.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\sl.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\sq.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\sr-Cyrl.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\sr.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\sv.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\th.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\tk.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\tr.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\uk.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\vi.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\zh-CN.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\i18n\zh-TW.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\select2.full.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\select2.full.min.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\select2.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\dist\js\select2.min.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\docs\announcements-4.0.html" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\docs\community.html" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\docs\examples.html" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\docs\index.html" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\docs\options-old.html" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\docs\options.html" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\Gruntfile.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\banner.end.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\banner.start.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\jquery.mousewheel.shim.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\jquery.select2.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\jquery.shim.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\compat\containerCss.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\compat\dropdownCss.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\compat\initSelection.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\compat\inputData.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\compat\matcher.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\compat\query.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\compat\utils.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\core.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\data\ajax.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\data\array.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\data\base.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\data\maximumInputLength.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\data\maximumSelectionLength.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\data\minimumInputLength.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\data\select.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\data\tags.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\data\tokenizer.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\defaults.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\diacritics.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\dropdown.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\dropdown\attachBody.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\dropdown\attachContainer.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\dropdown\closeOnSelect.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\dropdown\hidePlaceholder.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\dropdown\infiniteScroll.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\dropdown\minimumResultsForSearch.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\dropdown\search.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\dropdown\selectOnClose.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\dropdown\stopPropagation.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\af.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\ar.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\az.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\bg.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\bn.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\bs.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\ca.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\cs.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\da.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\de.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\dsb.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\el.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\en.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\es.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\et.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\eu.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\fa.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\fi.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\fr.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\gl.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\he.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\hi.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\hr.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\hsb.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\hu.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\hy.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\id.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\is.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\it.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\ja.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\ka.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\km.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\ko.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\lt.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\lv.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\mk.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\ms.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\nb.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\ne.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\nl.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\pl.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\ps.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\pt-BR.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\pt.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\ro.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\ru.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\sk.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\sl.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\sq.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\sr-Cyrl.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\sr.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\sv.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\th.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\tk.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\tr.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\uk.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\vi.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\zh-CN.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\i18n\zh-TW.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\keys.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\options.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\results.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\selection\allowClear.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\selection\base.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\selection\clickMask.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\selection\eventRelay.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\selection\multiple.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\selection\placeholder.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\selection\search.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\selection\single.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\selection\stopPropagation.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\translation.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\select2\utils.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\wrapper.end.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\js\wrapper.start.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\core.css" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\theme\classic\layout.css" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\theme\default\layout.css" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\a11y\search-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\a11y\selection-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\data\array-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\data\base-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\data\inputData-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\data\maximumInputLength-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\data\maximumSelectionLength-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\data\minimumInputLength-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\data\select-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\data\tags-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\data\tokenizer-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\dropdown\dropdownCss-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\dropdown\positioning-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\dropdown\selectOnClose-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\dropdown\stopPropagation-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\helpers.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\integration-jq1.html" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\integration-jq2.html" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\integration\dom-changes.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\integration\jquery-calls.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\integration\select2-methods.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\options\ajax-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\options\data-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\options\deprecated-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\options\translation-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\options\width-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\results\focusing-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\selection\allowClear-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\selection\containerCss-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\selection\multiple-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\selection\placeholder-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\selection\search-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\selection\single-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\selection\stopPropagation-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\unit-jq1.html" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\unit-jq2.html" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\utils\decorator-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\utils\escapeMarkup-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\vendor\jquery-1.7.2.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\vendor\jquery-2.2.4.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\vendor\qunit-1.23.1.css" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\tests\vendor\qunit-1.23.1.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\simple.money.format.js" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\slick.min.js" />
+    <Content Include="Quanlyhethong\Thuvien\plugin\bootstrap-datepicker.js" />
+    <Content Include="Quanlyhethong\Thuvien\plugin\bootstrap-datepicker.min.css" />
+    <Content Include="Quanlyhethong\Thuvien\plugin\bootstrap-datepicker.min.js" />
+    <Content Include="Quanlyhethong\Thuvien\plugin\style.css" />
+    <Content Include="Quanlyhethong\Thuvien\plugin\timepicker\bootstrap-timepicker.css" />
+    <Content Include="Quanlyhethong\Thuvien\plugin\timepicker\bootstrap-timepicker.js" />
+    <Content Include="Quanlyhethong\Thuvien\plugin\timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="Quanlyhethong\Thuvien\plugin\timepicker\bootstrap-timepicker.min.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\.gitignore" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\css\select2.css" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\css\select2.min.css" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\af.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\ar.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\az.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\bg.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\bn.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\bs.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\ca.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\cs.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\da.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\de.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\dsb.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\el.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\en.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\es.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\et.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\eu.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\fa.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\fi.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\fr.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\gl.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\he.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\hi.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\hr.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\hsb.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\hu.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\hy.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\id.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\is.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\it.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\ja.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\ka.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\km.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\ko.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\lt.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\lv.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\mk.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\ms.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\nb.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\ne.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\nl.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\pl.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\ps.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\pt-BR.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\pt.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\ro.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\ru.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\sk.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\sl.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\sq.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\sr-Cyrl.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\sr.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\sv.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\th.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\tk.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\tr.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\uk.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\vi.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\zh-CN.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\i18n\zh-TW.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\select2.full.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\select2.full.min.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\select2.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\dist\js\select2.min.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\docs\announcements-4.0.html" />
+    <Content Include="Quanlyhethong\Thuvien\select2\docs\community.html" />
+    <Content Include="Quanlyhethong\Thuvien\select2\docs\examples.html" />
+    <Content Include="Quanlyhethong\Thuvien\select2\docs\index.html" />
+    <Content Include="Quanlyhethong\Thuvien\select2\docs\options-old.html" />
+    <Content Include="Quanlyhethong\Thuvien\select2\docs\options.html" />
+    <Content Include="Quanlyhethong\Thuvien\select2\Gruntfile.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\banner.end.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\banner.start.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\jquery.mousewheel.shim.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\jquery.select2.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\jquery.shim.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\compat\containerCss.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\compat\dropdownCss.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\compat\initSelection.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\compat\inputData.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\compat\matcher.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\compat\query.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\compat\utils.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\core.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\data\ajax.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\data\array.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\data\base.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\data\maximumInputLength.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\data\maximumSelectionLength.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\data\minimumInputLength.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\data\select.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\data\tags.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\data\tokenizer.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\defaults.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\diacritics.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\dropdown.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\dropdown\attachBody.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\dropdown\attachContainer.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\dropdown\closeOnSelect.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\dropdown\hidePlaceholder.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\dropdown\infiniteScroll.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\dropdown\minimumResultsForSearch.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\dropdown\search.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\dropdown\selectOnClose.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\dropdown\stopPropagation.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\af.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\ar.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\az.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\bg.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\bn.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\bs.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\ca.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\cs.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\da.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\de.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\dsb.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\el.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\en.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\es.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\et.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\eu.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\fa.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\fi.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\fr.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\gl.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\he.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\hi.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\hr.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\hsb.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\hu.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\hy.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\id.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\is.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\it.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\ja.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\ka.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\km.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\ko.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\lt.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\lv.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\mk.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\ms.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\nb.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\ne.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\nl.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\pl.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\ps.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\pt-BR.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\pt.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\ro.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\ru.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\sk.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\sl.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\sq.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\sr-Cyrl.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\sr.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\sv.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\th.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\tk.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\tr.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\uk.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\vi.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\zh-CN.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\i18n\zh-TW.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\keys.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\options.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\results.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\selection\allowClear.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\selection\base.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\selection\clickMask.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\selection\eventRelay.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\selection\multiple.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\selection\placeholder.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\selection\search.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\selection\single.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\selection\stopPropagation.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\translation.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\select2\utils.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\wrapper.end.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\js\wrapper.start.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\a11y\search-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\a11y\selection-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\data\array-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\data\base-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\data\inputData-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\data\maximumInputLength-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\data\maximumSelectionLength-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\data\minimumInputLength-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\data\select-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\data\tags-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\data\tokenizer-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\dropdown\dropdownCss-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\dropdown\positioning-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\dropdown\selectOnClose-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\dropdown\stopPropagation-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\helpers.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\integration-jq1.html" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\integration-jq2.html" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\integration\dom-changes.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\integration\jquery-calls.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\integration\select2-methods.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\options\ajax-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\options\data-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\options\deprecated-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\options\translation-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\options\width-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\results\focusing-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\selection\allowClear-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\selection\containerCss-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\selection\multiple-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\selection\placeholder-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\selection\search-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\selection\single-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\selection\stopPropagation-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\unit-jq1.html" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\unit-jq2.html" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\utils\decorator-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\utils\escapeMarkup-tests.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\vendor\jquery-1.7.2.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\vendor\jquery-2.2.4.js" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\vendor\qunit-1.23.1.css" />
+    <Content Include="Quanlyhethong\Thuvien\select2\tests\vendor\qunit-1.23.1.js" />
+    <Content Include="Quanlyhethong\Thuvien\Toastr\tienganh.js" />
+    <Content Include="Quanlyhethong\Thuvien\Toastr\toastr.css" />
+    <Content Include="Quanlyhethong\Thuvien\Toastr\toastr.js" />
+    <Content Include="Quanlyhethong\XemchitietHD.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Model\model.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quanlyhethong\BaocaothongkeHoaDon.aspx.cs">
+      <DependentUpon>BaocaothongkeHoaDon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\BaocaothongkeHoaDon.aspx.designer.cs">
+      <DependentUpon>BaocaothongkeHoaDon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\BaocaothongkeTheoChiNhanh.aspx.cs">
+      <DependentUpon>BaocaothongkeTheoChiNhanh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\BaocaothongkeTheoChiNhanh.aspx.designer.cs">
+      <DependentUpon>BaocaothongkeTheoChiNhanh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Dangnhap.aspx.cs">
+      <DependentUpon>Dangnhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Dangnhap.aspx.designer.cs">
+      <DependentUpon>Dangnhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Danhsachhoadon.aspx.cs">
+      <DependentUpon>Danhsachhoadon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Danhsachhoadon.aspx.designer.cs">
+      <DependentUpon>Danhsachhoadon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Danhsachnhanvien.aspx.cs">
+      <DependentUpon>Danhsachnhanvien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Danhsachnhanvien.aspx.designer.cs">
+      <DependentUpon>Danhsachnhanvien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Danhsachphieunhap.aspx.cs">
+      <DependentUpon>Danhsachphieunhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Danhsachphieunhap.aspx.designer.cs">
+      <DependentUpon>Danhsachphieunhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Inhoadon.aspx.cs">
+      <DependentUpon>Inhoadon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Inhoadon.aspx.designer.cs">
+      <DependentUpon>Inhoadon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Layout.Master.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Layout.Master.designer.cs">
+      <DependentUpon>Layout.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Quanlychinhanh.aspx.cs">
+      <DependentUpon>Quanlychinhanh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Quanlychinhanh.aspx.designer.cs">
+      <DependentUpon>Quanlychinhanh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Quanlyhoadon.aspx.cs">
+      <DependentUpon>Quanlyhoadon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Quanlyhoadon.aspx.designer.cs">
+      <DependentUpon>Quanlyhoadon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Quanlykhachhang.aspx.cs">
+      <DependentUpon>Quanlykhachhang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Quanlykhachhang.aspx.designer.cs">
+      <DependentUpon>Quanlykhachhang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Quanlynhacungcap.aspx.cs">
+      <DependentUpon>Quanlynhacungcap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Quanlynhacungcap.aspx.designer.cs">
+      <DependentUpon>Quanlynhacungcap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Quanlynhaphang.aspx.cs">
+      <DependentUpon>Quanlynhaphang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Quanlynhaphang.aspx.designer.cs">
+      <DependentUpon>Quanlynhaphang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Quanlysanpham.aspx.cs">
+      <DependentUpon>Quanlysanpham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Quanlysanpham.aspx.designer.cs">
+      <DependentUpon>Quanlysanpham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Quanlytaikhoan.aspx.cs">
+      <DependentUpon>Quanlytaikhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Quanlytaikhoan.aspx.designer.cs">
+      <DependentUpon>Quanlytaikhoan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Suaphieunhap.aspx.cs">
+      <DependentUpon>Suaphieunhap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Suaphieunhap.aspx.designer.cs">
+      <DependentUpon>Suaphieunhap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Themnhanvien.aspx.cs">
+      <DependentUpon>Themnhanvien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Themnhanvien.aspx.designer.cs">
+      <DependentUpon>Themnhanvien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Themsanpham.aspx.cs">
+      <DependentUpon>Themsanpham.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Themsanpham.aspx.designer.cs">
+      <DependentUpon>Themsanpham.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\Trangchu.aspx.cs">
+      <DependentUpon>Trangchu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\Trangchu.aspx.designer.cs">
+      <DependentUpon>Trangchu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quanlyhethong\XemchitietHD.aspx.cs">
+      <DependentUpon>XemchitietHD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quanlyhethong\XemchitietHD.aspx.designer.cs">
+      <DependentUpon>XemchitietHD.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Quanlyhethong\Thuvien\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Quanlyhethong\Thuvien\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Quanlyhethong\Thuvien\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Quanlyhethong\Thuvien\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\Muli-Italic-VariableFont_wght.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\Muli-VariableFont_wght.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\Roboto-Black.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\Roboto-BlackItalic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\Roboto-Bold.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\Roboto-BoldItalic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\Roboto-Italic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\Roboto-Light.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\Roboto-LightItalic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\Roboto-Medium.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\Roboto-MediumItalic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\Roboto-Regular.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\Roboto-Thin.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\Roboto-ThinItalic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\SFUToledoBold.TTF" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\SFUToledoMedium.TTF" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-Black.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-BlackItalic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-Bold.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-BoldItalic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-ExtraBold.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-ExtraBoldItalic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-ExtraLight.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-ExtraLightItalic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-Italic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-Light.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-LightItalic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-Medium.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-MediumItalic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-Regular.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-SemiBold.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\static\Muli-SemiBoldItalic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM A&amp;S Graceland.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM A&amp;S Heartbeat.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM A&amp;S Signwriter.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM Agin.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM Aircona.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM Akashi.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM Alba Matter.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM Alberta Heavy.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM Alexander.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM Alpine KT.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM Alter Gothic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM Ambrose.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM Ambrosia.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM American Sans.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM Americana.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM AmericanaB.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM AmericanaBEx.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM AmericanaItalic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM Amerika Sans.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTM Amherst.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTMHelve.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTMHelveBold.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTMHelveBold_Italic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTMHelvetIns.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\font-family\UTM\UTMHelve_Italic.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\fonts\flexslider-icon.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\fonts\flexslider-icon.woff" />
+    <Content Include="Quanlyhethong\Thuvien\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\fonts\fontawesome-webfont.woff" />
+    <Content Include="Quanlyhethong\Thuvien\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Quanlyhethong\Thuvien\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Quanlyhethong\Thuvien\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Quanlyhethong\Thuvien\fonts\Roboto-Condensed-Bold.woff" />
+    <Content Include="Quanlyhethong\Thuvien\fonts\Roboto-Condensed-Regular.woff" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\.editorconfig" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\.github\CONTRIBUTING.md" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\.github\ISSUE_TEMPLATE.md" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\.github\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\.github\stale.yml" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\.jshintignore" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\.jshintrc" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\.travis.yml" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\bower.json" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\CHANGELOG.md" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\component.json" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\composer.json" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\docs\README.md" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\LICENSE.md" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\package.json" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\README.md" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\core.css.map" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\core.scss" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\mixins\_gradients.scss" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\theme\classic\layout.css.map" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\theme\classic\layout.scss" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\theme\classic\_defaults.scss" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\theme\classic\_multiple.scss" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\theme\classic\_single.scss" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\theme\default\layout.css.map" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\theme\default\layout.scss" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\theme\default\_multiple.scss" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\theme\default\_single.scss" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\_dropdown.scss" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\_multiple.scss" />
+    <Content Include="Quanlyhethong\Thuvien\jquery\select2\src\scss\_single.scss" />
+    <Content Include="Quanlyhethong\Thuvien\select2\.editorconfig" />
+    <Content Include="Quanlyhethong\Thuvien\select2\.github\CONTRIBUTING.md" />
+    <Content Include="Quanlyhethong\Thuvien\select2\.github\ISSUE_TEMPLATE.md" />
+    <Content Include="Quanlyhethong\Thuvien\select2\.github\PULL_REQUEST_TEMPLATE.md" />
+    <Content Include="Quanlyhethong\Thuvien\select2\.github\stale.yml" />
+    <Content Include="Quanlyhethong\Thuvien\select2\.jshintignore" />
+    <Content Include="Quanlyhethong\Thuvien\select2\.jshintrc" />
+    <Content Include="Quanlyhethong\Thuvien\select2\.travis.yml" />
+    <Content Include="Quanlyhethong\Thuvien\select2\bower.json" />
+    <Content Include="Quanlyhethong\Thuvien\select2\CHANGELOG.md" />
+    <Content Include="Quanlyhethong\Thuvien\select2\component.json" />
+    <Content Include="Quanlyhethong\Thuvien\select2\composer.json" />
+    <Content Include="Quanlyhethong\Thuvien\select2\docs\README.md" />
+    <Content Include="Quanlyhethong\Thuvien\select2\LICENSE.md" />
+    <Content Include="Quanlyhethong\Thuvien\select2\package.json" />
+    <Content Include="Quanlyhethong\Thuvien\select2\README.md" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\scss\core.scss" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\scss\mixins\_gradients.scss" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\scss\theme\classic\layout.scss" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\scss\theme\classic\_defaults.scss" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\scss\theme\classic\_multiple.scss" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\scss\theme\classic\_single.scss" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\scss\theme\default\layout.scss" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\scss\theme\default\_multiple.scss" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\scss\theme\default\_single.scss" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\scss\_dropdown.scss" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\scss\_multiple.scss" />
+    <Content Include="Quanlyhethong\Thuvien\select2\src\scss\_single.scss" />
+    <Content Include="Quanlyhethong\Layout.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55595</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:55595/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

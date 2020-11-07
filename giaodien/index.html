@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Trang chủ</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="icon" href="img/DV01.png">
+	<script src="jquery/jquery.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css">
+    <script src="jquery/jquery.dataTables.min.js"></script>
+    <script src="jquery/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="select2/dist/js/select2.js"></script>
+    <link rel="stylesheet" type="text/css" href="select2/dist/css/select2.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="jquery/jquery.fancybox.css" />
+    <script type="text/javascript" src="jquery/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="jquery/fancybox.js"></script>
+    <link rel="stylesheet" type="text/css" href="Toastr/toastr.css">
+    <script type="text/javascript" src="Toastr/tienganh.js"></script>
+    <script type="text/javascript" src="Toastr/toastr.js"></script>
+    <link href="plugin/bootstrap-datepicker.min.css" rel="stylesheet">
+    <script src="plugin/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+
+</head>
+<body>
+	<div class="container-fluid" style="background: #f3f3f3;">
+		<div class="row" style="background: #009688 !important;">
+			<div class="col-md-8">
+                <img src="img/logodki_on.png" alt="" height="70">
+				<span class="page-title">TRANG CHỦ HỆ THỐNG QUẢN LÝ CỬA HÀNG BÁN LẺ</span>
+			</div>
+			<div class="col-md-4 text-right">
+
+			</div>
+		</div>
+		<div class="menu">
+			<nav class="navbar navbar-default" role="navigation">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#" style="color:#70809a;"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Trang chủ</a>
+				</div>
+		
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav">
+						<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-th-large"></i>&nbsp;Hệ thống<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown">
+                                    <a href="{$url}Bao-cao-thong-ke"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Báo cáo thống kê tài chính</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gg"></i>&nbsp; Quản lý sản phẩm<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown">
+                                    <a href="{$url}Bao-cao-thong-ke"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Báo cáo thống kê tài chính</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-line-chart"></i>&nbsp;Quản lý nhập hàng<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown">
+                                    <a href="{$url}Bao-cao-thong-ke"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Báo cáo thống kê tài chính</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-line-chart"></i>&nbsp;Quản lý hóa đơn<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown">
+                                    <a href="{$url}Bao-cao-thong-ke"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Báo cáo thống kê tài chính</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Báo cáo thống kê<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown">
+                                    <a href="{$url}Bao-cao-thong-ke"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Báo cáo thống kê tài chính</a>
+                                </li>
+                            </ul>
+                        </li>
+					</ul>
+					 <ul class="nav navbar-nav navbar-right">
+					 	<li class="dropdown">
+					 		<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span> Trần thùy trang <b class="caret"></b></a>
+					 		<ul class="dropdown-menu">
+					 			<li class="dropdown">
+					 				<a href=""><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Thông tin cá nhân</a>
+					 			</li>
+					 		</ul>
+					 	</li>
+                      	<li style="margin-right: 50px;"><a href="{$url}login"><span class="glyphicon glyphicon-log-in"></span> Đăng xuất</a></li>
+                    </ul>
+				</div><!-- /.navbar-collapse -->
+			</nav>
+		</div>
+	</div>
+	<div class="container-fluid main">
+		<h3>TRANG CHỦ HỆ THỐNG QUẢN LÝ CỬA HÀNG BÁN LẺ !</h3>
+		<section class="content">
+			<div class="row main-box">
+			  	<div class="col-md-3">
+			  		<div class="box bg-pink">
+			  			<div class="pull-left">
+			  				<a href="" class="title-box">Hệ thống</a>
+			  			</div>
+			  			<div class="pull-right">
+			  				<i class="fa fa-th text-white" aria-hidden="true"></i>
+			  			</div>
+			  		</div>
+			  	</div>
+
+			  	<div class="col-md-3">
+			  		<div class="box bg-purple">
+			  			<div class="pull-left">
+			  				<a href="" class="title-box">Quản lý sản phẩm</a>
+			  			</div>
+			  			<div class="pull-right">
+			  				<i class="fa fa-th text-white" aria-hidden="true"></i>
+			  			</div>
+			  		</div>
+			  	</div>
+
+			  	<div class="col-md-3">
+			  		<div class="box bg-info">
+			  			<div class="pull-left">
+			  				<a href="" class="title-box">Quản lý nhập hàng</a>
+			  			</div>
+			  			<div class="pull-right">
+			  				<i class="fa fa-credit-card text-white" aria-hidden="true"></i>
+			  			</div>
+			  		</div>
+			  	</div>
+
+			  	<div class="col-md-3">
+			  		<div class="box bg-primary">
+			  			<div class="pull-left">
+			  				<a href="" class="title-box">Quản lý hóa đơn</a>
+			  			</div>
+			  			<div class="pull-right">
+			  				<i class="fa fa-book" aria-hidden="true"></i>
+			  			</div>
+			  		</div>
+			  	</div>
+			</div>
+			<div class="row main-box">
+			  	<div class="col-md-3">
+			  		<div class="box bg-warning">
+			  			<div class="pull-left">
+			  				<a href="" class="title-box">Quản lý tài khoản</a>
+			  			</div>
+			  			<div class="pull-right">
+			  				<i class="fa fa-users text-white" aria-hidden="true"></i>
+			  			</div>
+			  		</div>
+			  	</div>
+
+			  	<div class="col-md-3">
+			  		<div class="box bg-success">
+			  			<div class="pull-left">
+			  				<a href="" class="title-box">Báo cáo thống kê</a>
+			  			</div>
+			  			<div class="pull-right">
+			  				<i class="fa fa-calendar text-white"></i>
+			  			</div>
+			  		</div>
+			  	</div>
+			</div>	
+		</section>
+	</div>	
+	<footer class="white navbar-fixed-bottom" align="center">
+			<h4>
+				Chuyên đề tốt nghiệp Trần Thùy Trang khoa Công nghệ thông tin năm 2020
+			</h4>
+	</footer>
+</body>
+<script type="text/javascript">
+	$('.js-example-basic-single').select2();
+    $(function() {
+        $('#table_id').DataTable();
+    });
+    $('.datepicker').datepicker({
+	  format: 'dd/mm/yyyy',
+	  autoclose: true
+	});
+</script>

@@ -1,0 +1,116 @@
+/* (1366x768) WXGA Display */
+@media screen and (min-width: 1441px) and (max-width: 1920px) {
+
+}
+
+/*Medium Desktop Device*/
+@media screen and (min-width: 1200px) and (max-width: 1440px) {
+	.repon-log{
+    	margin-left: 30%;
+    }
+
+    .splash-description h4:nth-child(1){
+		font-size: 27px;
+		/*color: #014886;*/
+		/*text-shadow: #43c4eb 0px 0px 0px, #d84f4f 0px 0px 0px, #c3d624 0px 0px 0px, #beef29 0px 0px 0px, #56f305 0px 0px 0px, #c6e70f 0px 0px 0px;*/
+	}
+	.splash-description h5{
+		/*color: #ef0949;*/
+	    font-size: 18px;
+	}
+	.title-sadow{
+	    font-size: 28px;
+	}
+	.p-r{
+ 		padding: 25px;
+	}
+	.ghichu{
+		font-size: 16px;
+	}
+	.anh{
+		height: 150px;
+        width: auto;
+	}
+	
+}
+/* Normal desktop :992px. */
+
+@media (min-width: 1200px) and (max-width: 1364px) {
+	.repon-log{
+    	margin-left: 30%;
+    }
+    
+}
+@media (min-width: 1200px){
+	.repon-log{
+    	margin-left: 30%;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+	.repon-log{
+    	margin-left: 30%;
+    	width: 48%;
+    }
+}
+
+/* Normal desktop :991px. */
+
+@media (min-width: 768px) and (max-width: 991px) {
+	.repon-log{
+    	margin-left: 30%;
+    }
+}
+
+/* small mobile :320px. */
+
+@media (max-width: 767px) {
+
+}
+
+/* Large Mobile :480px. */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
+
+/* small mobile :320px. */
+
+@media (min-width: 240px) and (max-width: 479px) {
+	/*.splash-description h4:nth-child(1) {
+	    font-size: 15px;
+	}*/
+	.div-up{
+        margin-left: 0px !important;
+    }
+    .title-hs {
+	    font-size: 12px !important;
+	    margin: 11px !important;
+	}
+	.anh1 {
+	    height: 100% !important;;
+	}
+	.block-title span{
+		font-size: 20px;
+	}
+	.ca{
+		float: right;
+		margin-top: 10px;
+	}
+}
+@media (width: 320px){
+	.ca{
+		float: right;
+		margin-top: 10px;
+	}
+	.title-hs {
+	    font-size: 8px !important;
+    	margin: 11px !important;
+	}
+	.block-title span {
+	    font-size: 15px;
+	}
+	.radio-inline, .checkbox-inline{
+		padding-left: 0;
+	}
+}
+

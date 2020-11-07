@@ -1,0 +1,161 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Layout.master.cs" Inherits="Quanlybanhang.Quanlyhethong.Layout" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <title>Hệ thống quản lý cửa hàng bán lẻ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="Thuvien/bootstrap/css/bootstrap.min.css">
+	<link rel="icon" href="img/DV01.png">
+	<script src="Thuvien/jquery/jquery.js"></script>
+	<script src="Thuvien/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="Thuvien/css/dataTables.bootstrap.min.css">
+    <script src="Thuvien/jquery/jquery.dataTables.min.js"></script>
+    <script src="Thuvien/jquery/dataTables.bootstrap.min.js"></script>
+    <script type="text/javascript" src="Thuvien/select2/dist/js/select2.js"></script>
+    <link rel="stylesheet" type="text/css" href="Thuvien/select2/dist/css/select2.css">
+	<link rel="stylesheet" href="Thuvien/css/style.css">
+	<link rel="stylesheet" href="Thuvien/css/animate.css">
+	<link rel="stylesheet" type="text/css" href="Thuvien/jquery/jquery.fancybox.css" />
+    <script type="text/javascript" src="Thuvien/jquery/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="Thuvien/jquery/fancybox.js"></script>
+    <link rel="stylesheet" type="text/css" href="Thuvien/Toastr/toastr.css">
+    <script type="text/javascript" src="Thuvien/Toastr/tienganh.js"></script>
+    <script type="text/javascript" src="Thuvien/Toastr/toastr.js"></script>
+    <link href="Thuvien/plugin/bootstrap-datepicker.min.css" rel="stylesheet">
+    <script src="Thuvien/plugin/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
+    <script type="text/javascript" src="Thuvien/jquery/simple.money.format.js"></script>
+    <script language="javascript">
+        function thongbao_success(text, redirect) {
+            success(text);
+            setTimeout(function () {
+                location.href = redirect;
+            }, 1000);
+        }
+        function thongbao_success1(text, redirect) {
+            success(text);
+            location.href = redirect;
+        }
+        function thongbao_error(text, redirect) {
+            error(text);
+            setTimeout(function () {
+                location.href = redirect;
+            }, 1000);
+        }
+        </script>
+</head>
+<body>
+    
+         <% if (Session["manv"] != ""){%>
+        <div class="container-fluid" style="background: #f3f3f3;">
+		    <div class="row" style="background: #009688 !important;">
+			    <div class="col-md-8">
+                    <img src="Thuvien/img/logodki_on.png" alt="" height="70">
+				    <span class="page-title">TRANG CHỦ HỆ THỐNG QUẢN LÝ CỬA HÀNG BÁN LẺ</span>
+			    </div>
+			    <div class="col-md-4 text-right">
+			    </div>
+		    </div>
+		    <div class="menu">
+			    <nav class="navbar navbar-default" role="navigation">
+				    <!-- Brand and toggle get grouped for better mobile display -->
+				    <div class="navbar-header">
+					    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						    <span class="sr-only">Toggle navigation</span>
+						    <span class="icon-bar"></span>
+						    <span class="icon-bar"></span>
+						    <span class="icon-bar"></span>
+					    </button>
+					    <a class="navbar-brand" href="Trangchu.aspx" style="color:#70809a;"><i class="fa fa-home" aria-hidden="true"></i>&nbsp; Trang chủ</a>
+				    </div>
+		
+				    <!-- Collect the nav links, forms, and other content for toggling -->
+				    <div class="collapse navbar-collapse navbar-ex1-collapse">
+					    <ul class="nav navbar-nav">
+						    <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-th-large"></i>&nbsp;Hệ thống<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Quanlytaikhoan.aspx">Quản lý tài khoản</a></li>
+                                    <li><a href="Themnhanvien.aspx">Quản lý nhân viên</a></li>
+                                    <li><a href="Quanlykhachhang.aspx">Quản lý khác hàng</a></li>
+                                    <li><a href="Quanlynhacungcap.aspx">Quản lý nhà cung cấp</a></li>
+                                    <li><a href="Quanlychinhanh.aspx">Quản lý chi nhánh</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-fw fa-gg"></i>&nbsp; Quản lý sản phẩm<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="Quanlysanpham.aspx">Danh sách sản phẩm</a></li>
+                                    <li><a href="Themsanpham.aspx">Thêm sản phẩm</a></li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-line-chart"></i>&nbsp;Quản lý nhập hàng<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown">
+                                        <a href="Danhsachphieunhap.aspx"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Danh sách phiếu nhập</a>
+                                        <a href="Quanlynhaphang.aspx"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Thêm phiếu nhập hàng</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-line-chart"></i>&nbsp;Quản lý hóa đơn<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown">
+                                        <a href="Danhsachhoadon.aspx"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Danh sách hóa đơn</a>
+                                        <a href="Quanlyhoadon.aspx"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Lập hóa đơn</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Báo cáo thống kê<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="BaocaothongkeHoaDon.aspx">Báo cáo thống kê hóa đơn</a></li>
+                                    <li><a href="BaocaothongkeTheoChiNhanh.aspx">Báo cáo thống kê tổng chi nhánh</a></li>
+                                </ul>
+                            </li>
+					    </ul>
+					        <ul class="nav navbar-nav navbar-right">
+					 	    <li class="dropdown">
+					 		    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span><span id="tenuser" runat="server"></span> <b class="caret"></b></a>
+					 		    <ul class="dropdown-menu">
+					 			    <li class="dropdown">
+					 				    <a><span class="glyphicon glyphicon-list-alt"></span>&nbsp;Thông tin cá nhân</a>
+					 			    </li>
+					 		    </ul>
+					 	    </li>
+                      	    <li style="margin-right: 50px;">
+                                  <a href="Dangnhap.aspx?logout=1"><span class="glyphicon glyphicon-log-in"></span>Đăng xuất</a></li>
+                        </ul>
+				    </div><!-- /.navbar-collapse -->
+			    </nav>
+		    </div>
+	    </div>
+        <% } %>
+    <form id="form1" runat="server" enctype="multipart/form-data" method="post" novalidate> 
+        <div class="container-fluid main">
+            <div class="content">
+                <asp:ContentPlaceHolder ID="Content" runat="server"></asp:ContentPlaceHolder>
+            </div>
+        </div>
+    </form>
+         
+</body>
+     <script type="text/javascript">
+	    $('.js-example-basic-single').select2();
+        $(function() {
+            $('#table_id').DataTable();
+            $('.table_id').DataTable();
+        });
+        $('.datepicker').datepicker({
+	      format: 'dd/mm/yyyy',
+	      autoclose: true
+	    });
+    </script>
+</html>

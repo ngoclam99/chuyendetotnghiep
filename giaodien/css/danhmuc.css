@@ -1,0 +1,74 @@
+    .ngancach{
+		margin: 10px 0;
+		border-top: 1px solid #ccc;
+	}
+	.ctsv_hs{
+		padding: 0;
+		margin: 0;
+		margin-top: -8px;
+	}
+	.ttct_hssv, .ttct_dshssv1{
+		font-size: 16px;
+		font-weight: bold;
+		color:#3d3d3d;
+	}
+	.ttct_dshssv{
+		font-size: 18px;
+		font-weight: bold;
+		color:#3d3d3d;
+	}
+	.ttct_dshssv1{
+		font-size: 14px;
+	}
+    .todo td{
+    	color:red;
+    }
+    .todo td a:nth-child(1){
+    	color:red !important;
+    }
+    input[type=checkbox] {
+        margin: 0px 0 0;
+        width: 26px;
+        height: 14px;
+        line-height: normal;
+    }
+    .huyin{
+        margin-top: 3px;
+    }
+    .modal-dialog{
+        width: 800px !important;
+    }
+    .bt_print{
+        width: 100%;
+        margin-bottom: 7px;
+    }
+     table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td{
+        height: 33px !important;
+    }
+   .modal-body{
+        /*background: #f6fbff*/
+   }
+   .modal-footer, .modal-header{
+     background: #fff;
+   }
+   input[type=checkbox] {
+        margin: 0px 0 0;
+        width: 26px;
+        height: 14px;
+        line-height: normal;
+    }
+    table.table-bordered.dataTable tbody th, table.table-bordered.dataTable tbody td{
+        height: 33px !important;
+    }
+    .control-label{
+        font-size: 12px;height: 43px; line-height: 37px;
+    }
+    .input-many{
+        /*padding: 0;*/
+    }
+    .ttsv{
+        text-align: center;
+    }
+    .gachchan{
+        border-bottom: 1px solid red;
+    }
