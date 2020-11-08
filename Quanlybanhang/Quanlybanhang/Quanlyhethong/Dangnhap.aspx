@@ -8,7 +8,7 @@
                 <div class="panel panel-primary p-r">
                     <div class="panel-heading text-center">
                         <img src="Thuvien/img/logodki_on.png" alt="logo" width="170" height="110" class="logo-img">
-                        <span class="splash-description"><h4 >Hệ thống quản lý cửa hàng bán lẻ</h5></span>
+                        <span class="splash-description"><h4 >Website quản lý hệ thống bán lẻ</h5></span>
                         <hr>
                     </div>
                     <div class="panel-body">

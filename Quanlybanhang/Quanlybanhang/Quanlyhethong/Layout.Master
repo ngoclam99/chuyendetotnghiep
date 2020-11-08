@@ -30,7 +30,7 @@
     <script src="Thuvien/plugin/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
-    <script type="text/javascript" src="Thuvien/jquery/simple.money.format.js"></script>
+    <script type="text/javascript" src="Thuvien/jquery/ "></script>
     <script language="javascript">
         function thongbao_success(text, redirect) {
             success(text);
@@ -57,7 +57,7 @@
 		    <div class="row" style="background: #009688 !important;">
 			    <div class="col-md-8">
                     <img src="Thuvien/img/logodki_on.png" alt="" height="70">
-				    <span class="page-title">TRANG CHỦ HỆ THỐNG QUẢN LÝ CỬA HÀNG BÁN LẺ</span>
+				    <span class="page-title">TRANG CHỦ WEBSTIE QUẢN HỆ THỐNG BÁN LẺ</span>
 			    </div>
 			    <div class="col-md-4 text-right">
 			    </div>
@@ -78,6 +78,7 @@
 				    <!-- Collect the nav links, forms, and other content for toggling -->
 				    <div class="collapse navbar-collapse navbar-ex1-collapse">
 					    <ul class="nav navbar-nav">
+                             <% if (Session["maquyen"].Equals(1)){%>
 						    <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-th-large"></i>&nbsp;Hệ thống<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -104,6 +105,7 @@
                                     </li>
                                 </ul>
                             </li>
+                            <% } %>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-line-chart"></i>&nbsp;Quản lý hóa đơn<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -113,6 +115,7 @@
                                     </li>
                                 </ul>
                             </li>
+                            <% if (Session["maquyen"].Equals(1)){%>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;Báo cáo thống kê<b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -120,6 +123,7 @@
                                     <li><a href="BaocaothongkeTheoChiNhanh.aspx">Báo cáo thống kê tổng chi nhánh</a></li>
                                 </ul>
                             </li>
+                             <% } %>
 					    </ul>
 					        <ul class="nav navbar-nav navbar-right">
 					 	    <li class="dropdown">

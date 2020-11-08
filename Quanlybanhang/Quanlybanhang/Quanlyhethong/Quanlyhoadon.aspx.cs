@@ -54,6 +54,7 @@ namespace Quanlybanhang.Quanlyhethong
                 float dongia = float.Parse(txtDongia[i].ToString());
                 float tongtien = float.Parse(txtTongTien[i].ToString());
                 re_ct += Model.model.insert_cthoadon(maHD, txtSanpham[i].ToString(), soluong, dongia, tongtien);
+                Model.model.capnhat_soluongsp(txtSanpham[i].ToString(), soluong);
             }
             if (re_ct > 0)
             {

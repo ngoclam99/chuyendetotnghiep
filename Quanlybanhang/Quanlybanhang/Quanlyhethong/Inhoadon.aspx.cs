@@ -23,7 +23,7 @@ namespace Quanlybanhang.Quanlyhethong
                     NV.InnerText = row["FK_sNguoiLapHD"].ToString();
                     maHD.InnerText = row["sMaHD"].ToString();
                     KH.InnerText = row["FK_sMaKH"].ToString();
-                    chinhanh.InnerText = row[""].ToString();
+                    chinhanh.InnerText = row["sTenCN"].ToString();
                 }
                     DataTable tb = Model.model.getDataWhere(mahd, "get_cthoadon");
                 var html = "";

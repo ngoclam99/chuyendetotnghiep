@@ -46,6 +46,7 @@ namespace Quanlybanhang.Model
             command.CommandType = CommandType.StoredProcedure;
             command.Connection = conn;
             SqlDataReader reader = command.ExecuteReader();
+            conn.Close();
             return reader;
         }
 
@@ -128,6 +129,7 @@ namespace Quanlybanhang.Model
             SqlCommandBuilder builder = new SqlCommandBuilder(adapter); // cho phép  insert, update, delete gán cho adapter
             DataSet ds = new DataSet();
             adapter.Fill(ds); // đẩy câu lệnh vừa truy vấn được vào dataset
+            Conn.Close();
             return ds.Tables[0];
         }
 
@@ -168,6 +170,7 @@ namespace Quanlybanhang.Model
             cmd.Parameters.AddWithValue("@macn", macn);
             cmd.Parameters.AddWithValue("@trangthai", trangthai);
             int ret = cmd.ExecuteNonQuery();
+            conn.Close();
             return ret;
         }
 
@@ -181,6 +184,7 @@ namespace Quanlybanhang.Model
             command.Parameters.AddWithValue(parameter, value);
             command.Connection = conn;
             int banghitacdong = command.ExecuteNonQuery();
+            conn.Close();
             return banghitacdong;
         }
 
@@ -199,6 +203,7 @@ namespace Quanlybanhang.Model
             cmd.Parameters.AddWithValue("@ghichu", ghichu);
             cmd.Parameters.AddWithValue("@trangthai", trangthai);
             int ret = cmd.ExecuteNonQuery();
+            conn.Close();
             return ret;
         }
 
@@ -217,6 +222,7 @@ namespace Quanlybanhang.Model
             cmd.Parameters.AddWithValue("@gioitinh", gioitinh);
             cmd.Parameters.AddWithValue("@trangthai", trangthai);
             int ret = cmd.ExecuteNonQuery();
+            conn.Close();
             return ret;
         }
 
@@ -236,6 +242,7 @@ namespace Quanlybanhang.Model
             cmd.Parameters.AddWithValue("@matkhau", matkhau);
             cmd.Parameters.AddWithValue("@trangthai", trangthai);
             int ret = cmd.ExecuteNonQuery();
+            conn.Close();
             return ret;
         }
 
@@ -253,6 +260,7 @@ namespace Quanlybanhang.Model
             cmd.Parameters.AddWithValue("@diachi", diachi);
             cmd.Parameters.AddWithValue("@trangthai", trangthai);
             int ret = cmd.ExecuteNonQuery();
+            conn.Close();
             return ret;
         }
 
@@ -268,6 +276,7 @@ namespace Quanlybanhang.Model
             cmd.Parameters.AddWithValue("@tenloai", tenloai);
             cmd.Parameters.AddWithValue("@trangthai", trangthai);
             int ret = cmd.ExecuteNonQuery();
+            conn.Close();
             return ret;
         }
 
@@ -306,6 +315,7 @@ namespace Quanlybanhang.Model
             cmd.Parameters.AddWithValue("@machinhanh", machinhanh);
             cmd.Parameters.AddWithValue("@trangthai", trangthai);
             int ret = cmd.ExecuteNonQuery();
+            conn.Close();
             return ret;
         }
 
@@ -320,6 +330,7 @@ namespace Quanlybanhang.Model
             cmd.Parameters.AddWithValue("@ghichu", ghichu);
             cmd.Parameters.AddWithValue("@masp", masp);
             int ret = cmd.ExecuteNonQuery();
+            conn.Close();
             return ret;
         }
 
@@ -336,6 +347,7 @@ namespace Quanlybanhang.Model
             cmd.Parameters.AddWithValue("@dongia", dongia);
             cmd.Parameters.AddWithValue("@tongtien", tongtien);
             int ret = cmd.ExecuteNonQuery();
+            conn.Close();
             return ret;
         }
 
@@ -351,6 +363,7 @@ namespace Quanlybanhang.Model
             cmd.Parameters.AddWithValue("@macn", macn);
             cmd.Parameters.AddWithValue("@mancc", mancc);
             int ret = cmd.ExecuteNonQuery();
+            conn.Close();
             return ret;
         }
 
@@ -365,6 +378,7 @@ namespace Quanlybanhang.Model
             cmd.Parameters.AddWithValue("@giaban", giasp);
             cmd.Parameters.AddWithValue("@soluong", soluong);
             int ret = cmd.ExecuteNonQuery();
+            conn.Close();
             return ret;
         }
 
@@ -379,6 +393,7 @@ namespace Quanlybanhang.Model
             command.Parameters.AddWithValue("@mapn", value2);
             command.Connection = conn;
             int banghitacdong = command.ExecuteNonQuery();
+            conn.Close();
             return banghitacdong;
         }
 
@@ -395,6 +410,7 @@ namespace Quanlybanhang.Model
             cmd.Parameters.AddWithValue("@nguoilapHD", nguoilap);
             cmd.Parameters.AddWithValue("@machinhanh", macn);
             int ret = cmd.ExecuteNonQuery();
+            conn.Close();
             return ret;
         }
 
@@ -411,6 +427,7 @@ namespace Quanlybanhang.Model
             cmd.Parameters.AddWithValue("@dongia", dongia);
             cmd.Parameters.AddWithValue("@tongtien", tongtien);
             int ret = cmd.ExecuteNonQuery();
+            conn.Close();
             return ret;
         }
 
@@ -428,8 +445,25 @@ namespace Quanlybanhang.Model
             SqlCommandBuilder builder = new SqlCommandBuilder(adapter); // cho phép  insert, update, delete gán cho adapter
             DataSet ds = new DataSet();
             adapter.Fill(ds); // đẩy câu lệnh vừa truy vấn được vào dataset
+            Conn.Close();
             return ds.Tables[0];
         }
+
+        //insert thông tin tài khoản
+
+        public static int capnhat_soluongsp(string ma, int soluong)
+        {
+            SqlConnection conn = SqlConnectionData.Connect();
+            conn.Open();
+            SqlCommand cmd = new SqlCommand("update_soluongSP", conn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@masp", ma);
+            cmd.Parameters.AddWithValue("@soluong", soluong);
+            int ret = cmd.ExecuteNonQuery();
+            conn.Close();
+            return ret;
+        }
+
 
 
     }

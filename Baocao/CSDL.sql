@@ -72,7 +72,7 @@ exec get_nhacungcap
 ---Insert nhà cung cấp-----
 alter proc capnhat_nhacc
 @mancc nvarchar(100),
-@tenncc nvarchar(50),
+@tenncc nvarchar(255),
 @diachi nvarchar(255),
 @dienthoai nvarchar(50),
 @ghichu nvarchar(255),
@@ -173,6 +173,7 @@ begin
 	SELECT * FROM tbl_taikhoan 
 	INNER JOIN tbl_nhanvien on tbl_taikhoan.FK_sMaNV = tbl_nhanvien.sMaNV
 	INNER JOIN tbl_quyen on tbl_quyen.iMaQuyen = tbl_taikhoan.FK_iMaQuyen 
+	inner join tbl_chinhanh on tbl_chinhanh.iMaCN = tbl_nhanvien.FK_iMaCN
 end 
 
 -- xóa tài khoản
@@ -485,13 +486,17 @@ begin
 	INSERT INTO tbl_chitiethoadon values(@mahd, @masp, @soluong, @dongia, @tongtien)
 end
 
-create proc get_hoadon
+alter proc get_hoadon
 as
 begin
-	SELECT * FROM tbl_hoadon
+	SELECT tbl_chinhanh.sTenCN, tbl_nhanvien.sTenNV, tbl_khachhang.sTenKH, tbl_hoadon.sThoiGian_Lap, tbl_hoadon.sMaHD,
+	sum(tbl_chitiethoadon.fTongTienM) as [tongtienHD]
+	 FROM tbl_hoadon
 	INNER JOIN tbl_chinhanh on tbl_hoadon.FK_iMaCN = tbl_chinhanh.iMaCN
 	LEFT JOIN tbl_khachhang on tbl_hoadon.FK_sMaKH = tbl_khachhang.sMaKH
 	INNER JOIN tbl_nhanvien on tbl_nhanvien.sMaNV = tbl_hoadon.FK_sNguoiLapHD
+	LEFT JOIN tbl_chitiethoadon on tbl_chitiethoadon.FK_MaHD = tbl_hoadon.sMaHD
+	group by tbl_chinhanh.sTenCN, tbl_nhanvien.sTenNV, tbl_khachhang.sTenKH, tbl_hoadon.sThoiGian_Lap, tbl_hoadon.sMaHD
 end
 
 create proc delete_hoadon
@@ -512,11 +517,12 @@ begin
 	where tbl_chitiethoadon.FK_MaHD = @id
 end
 
-create proc get_hoadon_where
+alter proc get_hoadon_where
 @id nvarchar(100)
 as
 begin
-	SELECT * from tbl_hoadon 
+	SELECT * from tbl_hoadon
+	inner join tbl_chinhanh on tbl_chinhanh.iMaCN = tbl_hoadon.FK_iMaCN 
 	where tbl_hoadon.sMaHD = @id
 end
 
@@ -560,6 +566,14 @@ end
 
 exec getTTChiNhanhTheoNgay '07/11/2020'
 
+alter proc update_soluongSP
+@masp nvarchar(100),
+@soluong int
+as
+begin
+	update tbl_sanpham set iSoLuong = iSoLuong - @soluong where sMaSP =  @masp
+end
+
 SELECT * FROM tbl_anh
 SELECT * FROM tbl_chinhanh
 SELECT * FROM tbl_chitiethoadon
@@ -575,3 +589,4 @@ SELECT * FROM tbl_taikhoan
 SELECT * FROM tbl_sanpham
 SELECT * FROM tbl_chitietphieunhap
 
+ALTER TABLE tbl_nhacungcap ALTER COLUMN sTenNhaCC nvarchar(500)

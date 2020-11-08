@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -35,9 +36,11 @@ namespace Quanlybanhang.Quanlyhethong
 
         private void load_hoadon()
         {
+            CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
             DataTable tb = Model.model.getData("get_hoadon");
             var html = "";
             int stt = 1;
+            double tongtien = 0;
             foreach (DataRow row in tb.Rows)
             {
                 html += "<tr>";
@@ -47,9 +50,12 @@ namespace Quanlybanhang.Quanlyhethong
                 html += "<td>" + row["sTenKH"] + "</td>";
                 html += "<td>" + row["sTenNV"] + "</td>";
                 html += "<td>" + row["sTenCN"] + "</td>";
+                html += "<td>" + double.Parse(row["tongtienHD"].ToString()).ToString("#,###", cul.NumberFormat) + " VNĐ" + "</td>";
                 html += "<td class='text-center'> <a href='XemchitietHD.aspx?mahd=" + row["sMaHD"] + "' class='btn btn-primary'>Xem chi tiết</a> <a href='Inhoadon.aspx?mahd=" + row["sMaHD"] + "' class='btn btn-success'>In hóa đơn</a> <a href='Danhsachhoadon.aspx?xoahd=" + row["sMaHD"] + "' class='btn btn-danger' onclick='return confirm(\"Bạn có chắc chắn muốn xóa phiếu nhập này không?\")'>Xóa phiếu nhập</a>";
                 html += "</tr>";
+                tongtien += Double.Parse(row["tongtienHD"].ToString());
             }
+            tongtienHDD.InnerText = tongtien.ToString("#,###", cul.NumberFormat) + " VNĐ" ;
             tbody.InnerHtml = html;
         }
     }

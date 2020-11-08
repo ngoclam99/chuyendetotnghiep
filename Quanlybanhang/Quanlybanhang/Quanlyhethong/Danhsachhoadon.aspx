@@ -21,12 +21,19 @@
                                     <th>Khách hàng</th>
                                     <th>Người lập</th>
                                     <th>Chi nhánh</th>
+                                    <th>Tổng tiền HD</th>
                                     <th class="text-center">Tác vụ</th>
                                 </tr>
                             </thead>
                             <tbody id="tbody" runat="server">
 
                             </tbody>
+                            <tfoot>
+                                <th colspan="5"></th>
+                                <th>Tổng tiền</th>
+                                <th><span id="tongtienHDD" runat="server"></span></th>
+                                <th></th>
+                            </tfoot>
                         </table>
                     </div>
                 </div>

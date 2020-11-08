@@ -62,6 +62,7 @@
                                         </asp:TemplateField>
                                         <asp:BoundField DataField="sTenTK" HeaderText="Tên tài khoản" />
                                         <asp:BoundField DataField="sTenNV" HeaderText="Tên nhân viên" />
+                                        <asp:BoundField DataField="sTenCN" HeaderText="Tên chi nhánh" />
                                         <asp:BoundField DataField="sTenQuyen" HeaderText="Quyền" />
                                         <asp:TemplateField HeaderText="Tác vụ">
                                             <ItemTemplate>
@@ -69,6 +70,7 @@
                                                     data-sTenTK ="<%#Eval("sTenTK") %>"
                                                     data-sMaTK ="<%#Eval("sMaTK") %>"
                                                     data-FK_sMaNV ="<%#Eval("FK_sMaNV") %>"
+                                                    data-FK_sTenCN ="<%#Eval("sTenCN") %>"
                                                     data-FK_iMaQuyen ="<%#Eval("FK_iMaQuyen") %>"
                                                 > 
                                                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
@@ -115,4 +117,9 @@
             });
         });
     </script>
+    <style>
+        #Content_grDSTK > tbody > tr:nth-child(1) > th:nth-child(6){
+            width:18%;
+        }
+    </style>
 </asp:Content>

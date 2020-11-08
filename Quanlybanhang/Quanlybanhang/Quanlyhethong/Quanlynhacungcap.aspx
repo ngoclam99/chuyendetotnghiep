@@ -15,7 +15,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <asp:GridView ID="gvNhaCC" runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-bordered" OnRowCommand="gvNhaCC_RowCommand">
+                        <asp:GridView ID="gvNhaCC" runat="server" AutoGenerateColumns="False" CssClass=" table table-hover table-bordered" OnRowCommand="gvNhaCC_RowCommand">
                             <Columns>
                                 <asp:TemplateField HeaderText="STT">
                                     <ItemTemplate><%#Container.DataItemIndex + 1 %></ItemTemplate>
@@ -127,4 +127,9 @@
             });
         });
     </script>
+    <style>
+        #Content_gvNhaCC > tbody > tr:nth-child(1) > th:nth-child(6){
+            width:10%;
+        }
+    </style>
 </asp:Content>
