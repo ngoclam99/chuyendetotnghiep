@@ -31,6 +31,15 @@ namespace Quanlybanhang.Quanlyhethong {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl thoigian;
         
         /// <summary>
+        /// ngaychon control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ngaychon;
+        
+        /// <summary>
         /// tongtien control.
         /// </summary>
         /// <remarks>

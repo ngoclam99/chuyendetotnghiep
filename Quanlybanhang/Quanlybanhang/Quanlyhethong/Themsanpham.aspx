@@ -29,37 +29,37 @@
                                         </th>
                                         <th>Tên sản phẩm</th>
                                         <th><input type="text" class="form-control" ID="txtSanPham" runat="server" />
-                                            <asp:RequiredFieldValidator 
+                                            <%--<asp:RequiredFieldValidator 
                                             ID="rqtxtSanPham" 
                                             runat="server" 
                                             ControlToValidate="txtSanPham"
                                             CssClass="float-right badge badge-pink mt-2"
                                             ErrorMessage="Tên sản phẩm không được để trống">
-                                        </asp:RequiredFieldValidator>
+                                        </asp:RequiredFieldValidator>--%>
                                         </th>
                                         
                                     </tr>
                                     <tr>
                                         <th> Số lượng: </th>
                                         <th><input type="text" class="form-control txtSoLuong" id="txtSoLuong" runat="server" />
-                                            <asp:RequiredFieldValidator 
+                                            <%--<asp:RequiredFieldValidator 
                                             ID="rqtxtSoLuong" 
                                             runat="server" 
                                             ControlToValidate="txtSoLuong"
                                             CssClass="float-right badge badge-pink mt-2"
                                             ErrorMessage="Số lượng không được để trống">
-                                        </asp:RequiredFieldValidator>
+                                        </asp:RequiredFieldValidator>--%>
 
                                         </th>
                                         <th> Đơn giá:</th>
                                         <th><input type="text" class="form-control txtDonGia" id="txtDonGia" runat="server" />
-                                            <asp:RequiredFieldValidator 
+                                           <%-- <asp:RequiredFieldValidator 
                                             ID="RequiredFieldValidator3" 
                                             runat="server" 
                                             ControlToValidate="txtDonGia"
                                             CssClass="float-right badge badge-pink mt-2"
                                             ErrorMessage="Đơn giá không được để trống">
-                                        </asp:RequiredFieldValidator>
+                                        </asp:RequiredFieldValidator>--%>
                                         </th>
                                     </tr>
                                         <tr>

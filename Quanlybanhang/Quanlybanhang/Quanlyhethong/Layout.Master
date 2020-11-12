@@ -30,7 +30,6 @@
     <script src="Thuvien/plugin/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/5.1.1/bootstrap-social.min.css">
-    <script type="text/javascript" src="Thuvien/jquery/ "></script>
     <script language="javascript">
         function thongbao_success(text, redirect) {
             success(text);

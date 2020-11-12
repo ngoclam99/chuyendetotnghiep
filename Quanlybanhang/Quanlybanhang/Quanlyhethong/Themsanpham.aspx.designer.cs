@@ -31,15 +31,6 @@ namespace Quanlybanhang.Quanlyhethong {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtSanPham;
         
         /// <summary>
-        /// rqtxtSanPham control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rqtxtSanPham;
-        
-        /// <summary>
         /// txtSoLuong control.
         /// </summary>
         /// <remarks>
@@ -49,15 +40,6 @@ namespace Quanlybanhang.Quanlyhethong {
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtSoLuong;
         
         /// <summary>
-        /// rqtxtSoLuong control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rqtxtSoLuong;
-        
-        /// <summary>
         /// txtDonGia control.
         /// </summary>
         /// <remarks>
@@ -65,15 +47,6 @@ namespace Quanlybanhang.Quanlyhethong {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlInputText txtDonGia;
-        
-        /// <summary>
-        /// RequiredFieldValidator3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
         /// txtTongTien control.

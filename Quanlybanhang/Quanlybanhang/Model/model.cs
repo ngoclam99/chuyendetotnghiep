@@ -432,14 +432,14 @@ namespace Quanlybanhang.Model
         }
 
         // hàm get dữ liệu
-        public static DataTable getHoaDonTheoNgay(string macn, string ngaylap)
+        public static DataTable getHoaDonTheoNgay(string ngaylap)
         {
             DataTable dtb = new DataTable();
             SqlConnection Conn = SqlConnectionData.Connect();
             Conn.Open();
             SqlCommand cmd = new SqlCommand("thongkehoadon", Conn);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@macn", macn);
+            //cmd.Parameters.AddWithValue("@macn", macn);
             cmd.Parameters.AddWithValue("@ngaylap", ngaylap);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             SqlCommandBuilder builder = new SqlCommandBuilder(adapter); // cho phép  insert, update, delete gán cho adapter

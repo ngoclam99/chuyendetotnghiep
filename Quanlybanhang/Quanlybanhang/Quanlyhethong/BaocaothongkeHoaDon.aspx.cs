@@ -11,51 +11,60 @@ namespace Quanlybanhang.Quanlyhethong
 {
     public partial class BaocaothongkeHoaDon : System.Web.UI.Page
     {
+        string tencn = null;
         protected void Page_Load(object sender, EventArgs e)
         {
+             string tencn = null;
             if (!Page.IsPostBack)
             {
-                load_chinhanh();
+                //load_chinhanh();
             }
             DateTime Ngayhientai = DateTime.Now;
             DateTime date = Convert.ToDateTime(Ngayhientai);
             if(Request.Form["btnLoc"] == "loc")
             {
-                string chinhanh = Request.Form["chinhanh"];
-                if(chinhanh == null)
+                if (Request.Form["ngaylap"] == "")
                 {
-                    Response.Write("<script languague='javascript'> alert('Chi nhánh không được để trống?');location.href = 'BaocaothongkeHoaDon.aspx'</script>");
+                    Response.Write("<script languague='javascript'> alert('Ngày lập không được để trống?');location.href = 'BaocaothongkeHoaDon.aspx'</script>");
                 }
                 else
                 {
                     string ngaylap = Request.Form["ngaylap"];
-                    DataTable tb = Model.model.getHoaDonTheoNgay(chinhanh, ngaylap);
+                    DataTable tb = Model.model.getHoaDonTheoNgay(ngaylap);
                     var html = "";
                     int stt = 1;
                     string diachi = null;
                     double tongtienHD = 0;
-                    string tencn = null;
+
                     CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
+                    tbody.InnerHtml = "";
                     foreach (DataRow row in tb.Rows)
                     {
                         diachi = row["sDiaChiChiNhanh"].ToString();
                         html += "<tr>";
                         html += "<td class='text-center'>" + stt++ + "</td>";
                         html += "<td>" + row["sTenCN"] + "</td>";
-                        html += "<td>" + row["sMaHD"] + "</td>";
-                        html += "<td>" + row["sThoiGian_Lap"] + "</td>";
-                        html += "<td>" + double.Parse(row["tongtienHD"].ToString()).ToString("#,###", cul.NumberFormat) + " VNĐ</td>";
-                        tongtienHD += double.Parse(row["tongtienHD"].ToString());
+                        html += "<td>" + row["sDiaChiChiNhanh"] + "</td>";
+                        html += "<td>" + row["tongsoHD"] + "</td>";
+                        //html += "<td>" + double.Parse(row["tongtienHD"].ToString()).ToString("#,###", cul.NumberFormat) + " VNĐ</td>";
+                        //tongtienHD += double.Parse(row["tongtienHD"].ToString());
                         html += "</tr>";
-                        tencn = row["iMaCN"].ToString();
+                        tencn = row["FK_iMaCN"].ToString();
                     }
+
                     Tenchinhanh.Value = tencn;
-                    diachiCN.InnerText = "Địa chỉ: " + diachi;
-                    tongtien.InnerText = tongtienHD.ToString("#,###", cul.NumberFormat) + " VNĐ";
+                    if(diachi != null)
+                    {
+                        diachiCN.InnerText = "Địa chỉ: " + diachi;
+                    }
+                    else
+                    {
+                        diachiCN.InnerText = "Không có dữ liệu ";
+                    }
+                    ngaychon.InnerText = ngaylap;
+                    //tongtien.InnerText = tongtienHD.ToString("#,###", cul.NumberFormat) + " VNĐ";
                     tbody.InnerHtml = html;
                 }
-
-               
             }
         }
 
@@ -78,7 +87,7 @@ namespace Quanlybanhang.Quanlyhethong
                 html += "<option value='" + row["iMaCN"] + "'>" + row["sTenCN"] + "</option>";
             }
             html += "</select>";
-            div.InnerHtml = html;
+            //div.InnerHtml = html;
         }
     }
 }

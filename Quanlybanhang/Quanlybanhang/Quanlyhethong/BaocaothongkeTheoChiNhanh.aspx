@@ -35,7 +35,7 @@
                              </tbody>
                              <tfoot>
                                  <th colspan="2">
-                                     <p id="thoigian" runat="server"></p> </th>
+                                     <p id="thoigian" runat="server"></p> <span id="ngaychon" runat="server" style="display:none"></span></th>
                                  <th>Tổng tiền</th>
                                  <th> <span id="tongtien" runat="server"></span></th>
                              </tfoot>
@@ -51,6 +51,6 @@
         var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
         var yyyy = today.getFullYear();
         today = dd + '/' + mm+ '/' + yyyy;
-        $(".ngaylap").val(today);
+           $(".ngaylap").val($("#Content_ngaychon").text());
     </script>
 </asp:Content>

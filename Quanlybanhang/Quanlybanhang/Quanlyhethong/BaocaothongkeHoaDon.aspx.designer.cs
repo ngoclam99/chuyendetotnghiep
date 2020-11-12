@@ -13,15 +13,6 @@ namespace Quanlybanhang.Quanlyhethong {
     public partial class BaocaothongkeHoaDon {
         
         /// <summary>
-        /// div control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div;
-        
-        /// <summary>
         /// tbody control.
         /// </summary>
         /// <remarks>
@@ -40,13 +31,13 @@ namespace Quanlybanhang.Quanlyhethong {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl diachiCN;
         
         /// <summary>
-        /// tongtien control.
+        /// ngaychon control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl tongtien;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ngaychon;
         
         /// <summary>
         /// Tenchinhanh control.

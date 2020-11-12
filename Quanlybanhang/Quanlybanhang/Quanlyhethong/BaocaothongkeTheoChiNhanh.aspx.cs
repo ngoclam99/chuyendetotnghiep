@@ -23,6 +23,7 @@ namespace Quanlybanhang.Quanlyhethong
                 int stt = 1;
                 double tongtienHD = 0;
                 CultureInfo cul = CultureInfo.GetCultureInfo("vi-VN");   // try with "en-US"
+                tbody.InnerHtml = "";
                 foreach (DataRow row in tb.Rows)
                 {
                     html += "<tr>";
@@ -47,6 +48,7 @@ namespace Quanlybanhang.Quanlyhethong
                 }
                 thoigian.InnerText = "Ngày thống kê: "+ ngaylap;
                 tbody.InnerHtml = html;
+                ngaychon.InnerText = ngaylap;
                 tongtien.InnerText = tongtienHD.ToString("#,###", cul.NumberFormat) + " VNĐ";
             }
 

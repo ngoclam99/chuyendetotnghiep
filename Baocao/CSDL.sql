@@ -295,7 +295,7 @@ end
 
 -- get danh sách sản phẩm
 
-create proc get_sanpham
+alter proc get_sanpham
 as
 begin
 	select * from tbl_sanpham 
@@ -303,6 +303,7 @@ begin
 	inner join tbl_nhacungcap on tbl_nhacungcap.sMaNhaCC= tbl_sanpham.FK_sMaNhaCC
 	inner join tbl_nhanvien on tbl_nhanvien.sMaNV= tbl_sanpham.FK_sNguoiDangSP
 	inner join tbl_chinhanh on tbl_chinhanh.iMaCN= tbl_sanpham.FK_iMaCN
+	ORDER BY tbl_sanpham.sNgayDangSp DESC
 end
 
 
@@ -400,13 +401,14 @@ begin
 	update tbl_sanpham set fDonGia = @giaban,iSoLuong = @slcu + @soluong  where sMaSP = @masp
 end
 
-create proc get_phieunhap
+alter proc get_phieunhap
 as
 begin
 	select * from tbl_phieunhap 
 	inner join tbl_nhacungcap on tbl_nhacungcap.sMaNhaCC = tbl_phieunhap.FK_sMaNCC
 	inner join tbl_chinhanh on tbl_chinhanh.iMaCN= tbl_phieunhap.FK_iMaCN
 	inner join tbl_nhanvien on tbl_nhanvien.sMaNV= tbl_phieunhap.FK_sNguoiLap
+	order by tbl_phieunhap.sThoiGian_Nhap DESC
 end
 
 create proc get_ctphieunhap
@@ -497,6 +499,7 @@ begin
 	INNER JOIN tbl_nhanvien on tbl_nhanvien.sMaNV = tbl_hoadon.FK_sNguoiLapHD
 	LEFT JOIN tbl_chitiethoadon on tbl_chitiethoadon.FK_MaHD = tbl_hoadon.sMaHD
 	group by tbl_chinhanh.sTenCN, tbl_nhanvien.sTenNV, tbl_khachhang.sTenKH, tbl_hoadon.sThoiGian_Lap, tbl_hoadon.sMaHD
+	order by tbl_hoadon.sThoiGian_Lap DESC
 end
 
 create proc delete_hoadon
@@ -529,29 +532,28 @@ end
 ---- báo cáo thống kê
 
 alter proc thongkehoadon
-@macn int,
+--@macn int,
 @ngaylap nvarchar(50)
 as
 begin
-   if @ngaylap != ''
-	   begin
-		   select tbl_hoadon.sMaHD,tbl_hoadon.sThoiGian_Lap, tbl_chinhanh.sTenCN, tbl_chinhanh.iMaCN, tbl_chinhanh.sDiaChiChiNhanh, sum(tbl_chitiethoadon.fTongTienM) as [tongtienHD], count(tbl_chitiethoadon.FK_MaSP) as [tongsoSPHD] from tbl_hoadon
-			left join tbl_chitiethoadon on tbl_chitiethoadon.FK_MaHD = tbl_hoadon.sMaHD 
+	if @ngaylap != ''
+		begin
+			select tbl_hoadon.FK_iMaCN,tbl_chinhanh.sTenCN, tbl_chinhanh.sDiaChiChiNhanh, COUNT(sMaHD) as [tongsoHD]
+			from tbl_hoadon
 			inner join tbl_chinhanh on tbl_chinhanh.iMaCN = tbl_hoadon.FK_iMaCN
-			where tbl_hoadon.FK_iMaCN = @macn and sThoiGian_Lap like '%'+@ngaylap+'%'
-			group by tbl_hoadon.sMaHD,tbl_hoadon.sThoiGian_Lap, tbl_chinhanh.sTenCN,tbl_chinhanh.sDiaChiChiNhanh, tbl_chinhanh.iMaCN
-
-	   end
-   else
-	   begin
-			select tbl_hoadon.sMaHD, tbl_hoadon.sThoiGian_Lap, tbl_chinhanh.sTenCN, tbl_chinhanh.sTenCN, tbl_chinhanh.sDiaChiChiNhanh, sum(tbl_chitiethoadon.fTongTienM) as [tongtienHD], count(tbl_chitiethoadon.FK_MaSP) as [tongsoSPHD] from tbl_hoadon
-			left join tbl_chitiethoadon on tbl_chitiethoadon.FK_MaHD = tbl_hoadon.sMaHD 
-			inner join tbl_chinhanh on tbl_chinhanh.iMaCN = tbl_hoadon.FK_iMaCN
-			where tbl_hoadon.FK_iMaCN = @macn
-			group by tbl_hoadon.sMaHD,tbl_hoadon.sThoiGian_Lap, tbl_chinhanh.sTenCN,tbl_chinhanh.sDiaChiChiNhanh, tbl_chinhanh.iMaCN
-	   end
+			--right join tbl_chitiethoadon on tbl_chitiethoadon.FK_MaHD = tbl_hoadon.sMaHD 
+			where sThoiGian_Lap like '%'+@ngaylap+'%'
+			group by tbl_hoadon.FK_iMaCN,tbl_chinhanh.sTenCN, tbl_chinhanh.sDiaChiChiNhanh
+		end
 end
 
+
+
+select tbl_hoadon.sMaHD,tbl_hoadon.sThoiGian_Lap, tbl_chinhanh.sTenCN, tbl_chinhanh.iMaCN, tbl_chinhanh.sDiaChiChiNhanh, sum(tbl_chitiethoadon.fTongTienM) as [tongtienHD], count(tbl_chitiethoadon.FK_MaSP) as [tongsoSPHD] from tbl_hoadon
+left join tbl_chitiethoadon on tbl_chitiethoadon.FK_MaHD = tbl_hoadon.sMaHD 
+inner join tbl_chinhanh on tbl_chinhanh.iMaCN = tbl_hoadon.FK_iMaCN
+where sThoiGian_Lap like '%'+'08/11/2020'+'%'
+group by tbl_hoadon.sMaHD,tbl_hoadon.sThoiGian_Lap, tbl_chinhanh.sTenCN,tbl_chinhanh.sDiaChiChiNhanh, tbl_chinhanh.iMaCN
 
 alter proc getTTChiNhanhTheoNgay
 @id nvarchar(50)
